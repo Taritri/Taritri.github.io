@@ -57,7 +57,7 @@ ul li.checked {
 ul li.checked::before {
   content: '';
   position: absolute;
-  border-color: #fff;
+  border-color: #f7f;
   border-style: solid;
   border-width: 0 2px 2px 0;
   top: 10px;
@@ -128,18 +128,16 @@ input {
 <body>
 
 <div id="myDIV" class="header">
-  <h2 style="margin:5px">My To Do List</h2>
+  <h2 style="margin:5px">To-Do List</h2>
   <input type="text" id="myInput" placeholder="Title...">
   <span onclick="newElement()" class="addBtn">Add</span>
 </div>
 
 <ul id="myUL">
-  <li>Hit the gym</li>
-  <li class="checked">Pay bills</li>
-  <li>Meet George</li>
-  <li>Buy eggs</li>
-  <li>Read a book</li>
-  <li>Organize office</li>
+  <li class="checked">SW Task</li>
+  <li>Controls paper</li>
+  <li>Meeting on 16th</li>
+  <li>Lab report</li>
 </ul>
 
 <script>
@@ -199,6 +197,12 @@ function newElement() {
   }
 }
 </script>
-
+<?php  
+       $servername = "localhost";  
+       $username = "root";  
+       $password = "";  
+       $conn = mysql_connect ($servername , $username , $password) or die("unable to connect to host");  
+       $sql = mysql_select_db ('test',$conn) or die("unable to connect to database"); 
+?>   
 </body>
 </html>
